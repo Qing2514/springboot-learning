@@ -16,3 +16,23 @@ spring:
 
 # 3. debug 信息
 # logging.level.root = debug
+
+# 自定义数据
+book:
+  - id: 1
+    name: Qing1
+  - id: 2
+    name: Qing2
+
+baseDir: C:\
+
+userDir: ${baseDir}\Users
+
+# 使用 "" 括起来的字符串能识别出转义字符 \t \n
+# string: "spring\tboot\tlearning"
+
+datasource:
+  driver: mysql
+  url: https
+  username: 111
+  password: 111
