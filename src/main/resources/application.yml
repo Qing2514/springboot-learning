@@ -1,0 +1,18 @@
+# 服务器端口配置
+server:
+  port: 80
+
+# 修改banner (springboot 图标)
+spring:
+  main:
+    banner-mode: off
+
+# 日志
+# 1. 正常显示的信息
+# logging.level.root = info
+
+# 2. 报错信息
+# logging.level.root = error
+
+# 3. debug 信息
+# logging.level.root = debug
