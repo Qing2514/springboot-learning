@@ -1,6 +1,8 @@
 package com.example.entity;
 
 import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 /**
  * DataSource
@@ -9,10 +11,10 @@ import lombok.Data;
  * @since 0.0.1
  */
 @Data
-// @Component
-// // "" 中不能有大写
-// @ConfigurationProperties("datasource")
-public class DataSource {
+@Component
+// "" 中不能有大写
+@ConfigurationProperties("source")
+public class Source {
     private String driver;
     private String url;
     private String username;
