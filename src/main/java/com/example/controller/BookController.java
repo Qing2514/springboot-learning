@@ -1,7 +1,6 @@
 package com.example.controller;
 
 import com.example.entity.Book;
-import com.example.entity.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
@@ -34,8 +33,8 @@ public class BookController {
     @Autowired
     private Environment env;
 
-    @Autowired
-    private DataSource dataSource;
+    // @Autowired
+    // private DataSource dataSource;
 
     @PostMapping
     public String save(@RequestBody Book book) {
@@ -67,7 +66,7 @@ public class BookController {
         System.out.println("book[0].name: " + name);
         System.out.println("userDir: " + userDir);
         System.out.println("Environment.book[0].name: " + env.getProperty("book[0].name"));
-        System.out.println(dataSource);
+        // System.out.println(dataSource);
         return "book: getAll";
     }
 
