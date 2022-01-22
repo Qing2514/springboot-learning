@@ -6,6 +6,11 @@ server:
 spring:
   main:
     banner-mode: off
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:330/springboot
+    username: root
+    password: 2514632453
 
 # 日志
 # 1. 正常显示的信息
