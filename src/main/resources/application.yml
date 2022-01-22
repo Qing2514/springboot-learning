@@ -13,6 +13,18 @@ spring:
       username: root
       password: 2514632453
 
+# 数据库主键生成策略：自增（默认是自动分配主键）
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  # 开启运行日志
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 数据库表名前缀
+#      table-prefix: tbl_
+
+
 # 日志
 # 1. 正常显示的信息
 # logging.level.root = info
