@@ -7,10 +7,11 @@ spring:
   main:
     banner-mode: off
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:330/springboot
-    username: root
-    password: 2514632453
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:330/springboot
+      username: root
+      password: 2514632453
 
 # 日志
 # 1. 正常显示的信息
@@ -36,7 +37,7 @@ userDir: ${baseDir}\Users
 # 使用 "" 括起来的字符串能识别出转义字符 \t \n
 # string: "spring\tboot\tlearning"
 
-datasource:
+source:
   driver: mysql
   url: https
   username: 111
