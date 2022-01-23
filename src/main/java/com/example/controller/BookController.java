@@ -1,7 +1,7 @@
 package com.example.controller;
 
-import com.example.entity.Book;
-import com.example.entity.Source;
+import com.example.domain.Book;
+import com.example.domain.Source;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;

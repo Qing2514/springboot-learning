@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.dao.BookDao;
-import com.example.entity.Book;
+import com.example.domain.Book;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,12 +20,12 @@ class SpringbootApplicationTests {
         bookDao.selectList(null);
     }
 
-    @Test
-    void testSave() {
-        Book book = new Book();
-        book.setName("testSave3");
-        bookDao.insert(book);
-    }
+    // @Test
+    // void testSave() {
+    //     Book book = new Book();
+    //     book.setName("testSave3");
+    //     bookDao.insert(book);
+    // }
 
     @Test
     void testDelete() {
