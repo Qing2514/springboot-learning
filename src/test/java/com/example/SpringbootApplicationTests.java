@@ -1,5 +1,6 @@
 package com.example;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.dao.BookDao;
@@ -40,6 +41,17 @@ class SpringbootApplicationTests {
         System.out.println(page.getTotal());
         System.out.println(page.getPages());
         System.out.println(page.getRecords());
+    }
+
+    @Test
+    void testGetBy() {
+        String name = "Java";
+        // QueryWrapper<Book> qw = new QueryWrapper<>();
+        // qw.like("name",name);
+        // bookDao.selectList(qw);
+        LambdaQueryWrapper<Book> lqw = new LambdaQueryWrapper<>();
+        lqw.like(name != null, Book::getName, name);
+        bookDao.selectList(lqw);
     }
 
 }
