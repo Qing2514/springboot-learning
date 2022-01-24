@@ -1,16 +1,21 @@
-package com.example;
+package com.example.dao;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.example.dao.BookDao;
 import com.example.domain.Book;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+/**
+ * BookDaoTest
+ *
+ * @author Qing2514
+ * @since 0.0.1
+ */
 @SpringBootTest
-class SpringbootApplicationTests {
+public class BookDaoTest {
 
     @Autowired
     private BookDao bookDao;
@@ -53,5 +58,4 @@ class SpringbootApplicationTests {
         lqw.like(name != null, Book::getName, name);
         bookDao.selectList(lqw);
     }
-
 }
