@@ -37,17 +37,20 @@ public class BookController {
 
     @PostMapping
     public Response save(@RequestBody Book book) {
-        return new Response(bookService.save(book));
+        boolean flag = bookService.save(book);
+        return new Response(flag, flag ? "添加成功^_^" : "添加失败-_-!");
     }
 
     @DeleteMapping("/{id}")
     public Response delete(@PathVariable Integer id) {
-        return new Response(bookService.removeById(id));
+        boolean flag = bookService.removeById(id);
+        return new Response(flag, flag ? "删除成功^_^" : "删除失败-_-!");
     }
 
     @PutMapping
     public Response update(@RequestBody Book book) {
-        return new Response(bookService.updateById(book));
+        boolean flag = bookService.updateById(book);
+        return new Response(flag, flag ? "修改成功^_^" : "修改失败-_-!");
     }
 
     @GetMapping("/{id}")
