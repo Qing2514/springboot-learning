@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.example.controller.utils.Response;
 import com.example.domain.Book;
 import com.example.service.IBookService;
@@ -69,7 +70,11 @@ public class BookController {
 
     @GetMapping("{currentPage}/{pageSize}")
     public Response getPage(@PathVariable int currentPage, @PathVariable int pageSize) {
-        return new Response(true, bookService.getPage(currentPage, pageSize));
+        IPage<Book> page = bookService.getPage(currentPage, pageSize);
+        if (currentPage > page.getPages()) {
+            bookService.getPage((int) page.getPages(), pageSize);
+        }
+        return new Response(true, page);
     }
 
 }
