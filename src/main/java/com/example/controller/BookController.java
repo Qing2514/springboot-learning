@@ -69,10 +69,10 @@ public class BookController {
     }
 
     @GetMapping("{currentPage}/{pageSize}")
-    public Response getPage(@PathVariable int currentPage, @PathVariable int pageSize) {
-        IPage<Book> page = bookService.getPage(currentPage, pageSize);
+    public Response getPage(@PathVariable int currentPage, @PathVariable int pageSize, Book book) {
+        IPage<Book> page = bookService.getPage(currentPage, pageSize, book);
         if (currentPage > page.getPages()) {
-            bookService.getPage((int) page.getPages(), pageSize);
+            bookService.getPage((int) page.getPages(), pageSize, book);
         }
         return new Response(true, page);
     }
