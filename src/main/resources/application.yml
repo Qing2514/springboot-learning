@@ -2,7 +2,7 @@
 server:
   port: 80
 
-# 修改banner (springboot 图标)
+# 关闭 springboot banner (横幅、图标)
 spring:
   main:
     banner-mode: off
@@ -12,12 +12,28 @@ spring:
       url: jdbc:mysql://localhost:330/springboot
       username: root
       password: 2514632453
+# 设置日志模板格式，%d是日期，%p是日志级别，%5p是长度固定为5有利于对齐，%t是线程名，%c是类名,-40是左对齐40位，
+# .40控制内容的截取(超长部分会用缩略形式)，{cyan}是颜色，%m是打印的消息，%n是换行
+#logging:
+#  pattern:
+#    console: "%d %clr(%5p) --- [%16t] %clr(%-40.40c){cyan} : %m %n"
+#  # 配置日志文件并取名
+#  file:
+#    name: server.log
+#  logback:
+#    rollingpolicy:
+#      # 指定文件大小
+#      max-file-size: 10MB
+#      # 指定文件名格式（%i是第几个文件，文件大小满后，自动添加下一个文件），例如：server.2022-01-01.0.log
+#      file-name-pattern: server.%d{yyyy-MM-dd}.%i.log
 
 # 数据库主键生成策略：自增（默认是自动分配主键）
 mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+    # 关闭 mybatis-plus 横幅（图标）
+    banner: off
   # 开启运行日志
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

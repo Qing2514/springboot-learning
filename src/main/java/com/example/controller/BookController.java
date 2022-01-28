@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.example.controller.utils.Response;
 import com.example.domain.Book;
 import com.example.service.IBookService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
  * @author Qing2514
  * @since 0.0.1
  */
+@Slf4j
 @RestController
 @RequestMapping("/books")
 public class BookController {
@@ -38,6 +40,9 @@ public class BookController {
 
     @PostMapping
     public Response save(@RequestBody Book book) {
+        log.info("info");
+        log.warn("warn");
+        log.error("error");
         boolean flag = bookService.save(book);
         return new Response(flag, flag ? "添加成功^_^" : "添加失败-_-!");
     }
