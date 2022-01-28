@@ -4,8 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.example.controller.utils.Response;
 import com.example.domain.Book;
 import com.example.service.IBookService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,11 +15,10 @@ import org.springframework.web.bind.annotation.*;
  * @author Qing2514
  * @since 0.0.1
  */
+@Slf4j
 @RestController
 @RequestMapping("/books")
 public class BookController {
-    private static final Logger log = LoggerFactory.getLogger(BookController.class);
-
     // 读取 yml 文件中的数据
     // @Value 默认不支持复杂对象的转换，要自己去实现自定义转换器
     // 例如下面，不能直接取一个对象，只能取具体某个值
