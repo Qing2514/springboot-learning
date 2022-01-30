@@ -68,7 +68,8 @@ userDir: ${baseDir}\Users
 source:
   driver: mysql
   url: https
-  port: 80
+  # 配置数字类字符串最好加双引号，否则可能被识别成八进制，从而导致数据错误
+  port: "80"
   timeout: 3
   dataSize: 1
 

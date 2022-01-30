@@ -13,6 +13,9 @@ import org.springframework.boot.test.context.SpringBootTest;
  * @author Qing2514
  * @since 0.0.1
  */
+// 临时添加或修改测试属性，命令行参数args优先级比properties高，优先显示，通常用properties
+// @SpringBootTest(properties = {"source.driver = testValue1"})
+// @SpringBootTest(args = {"--source.driver = testValue2"})
 @SpringBootTest
 public class BookServiceTest {
 
