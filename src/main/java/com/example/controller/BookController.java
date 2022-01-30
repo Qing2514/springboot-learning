@@ -40,9 +40,9 @@ public class BookController {
 
     @PostMapping
     public Response save(@RequestBody Book book) {
-        log.info("info");
-        log.warn("warn");
-        log.error("error");
+        // log.info("info");
+        // log.warn("warn");
+        // log.error("error");
         boolean flag = bookService.save(book);
         return new Response(flag, flag ? "添加成功^_^" : "添加失败-_-!");
     }
