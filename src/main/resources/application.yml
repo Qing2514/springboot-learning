@@ -70,6 +70,8 @@ source:
   url: https
   username: 111
   password: 111
+  timeout: 3
+  dataSize: 1
 
 datasource:
   driverClassName: com.mysql.jdbc.Driver123
