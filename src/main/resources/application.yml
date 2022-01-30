@@ -73,5 +73,6 @@ source:
   timeout: 3
   dataSize: 1
 
-datasource:
-  driverClassName: com.mysql.jdbc.Driver123
+# 第三方bean属性绑定
+#datasource:
+#  driverClassName: com.mysql.jdbc.Driver123
