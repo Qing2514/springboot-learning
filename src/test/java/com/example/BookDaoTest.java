@@ -1,12 +1,14 @@
-package com.example.dao;
+package com.example;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.example.dao.BookDao;
 import com.example.domain.Book;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * BookDaoTest
@@ -15,6 +17,8 @@ import org.springframework.boot.test.context.SpringBootTest;
  * @since 0.0.1
  */
 @SpringBootTest
+// 测试数据库，数据不会插入到数据库（自动回滚，若id是自增，id会被占用）
+@Transactional
 public class BookDaoTest {
 
     @Autowired
@@ -25,12 +29,13 @@ public class BookDaoTest {
         bookDao.selectList(null);
     }
 
-    // @Test
-    // void testSave() {
-    //     Book book = new Book();
-    //     book.setName("testSave3");
-    //     bookDao.insert(book);
-    // }
+    @Test
+    void testSave() {
+        Book book = new Book();
+        book.setName("testSave3");
+        book.setDescription("testSave3");
+        bookDao.insert(book);
+    }
 
     @Test
     void testDelete() {

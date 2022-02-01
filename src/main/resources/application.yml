@@ -2,16 +2,27 @@
 server:
   port: 80
 
-# 关闭 springboot banner (横幅、图标)
 spring:
+  # 当前激活环境，多个环境间用，分割
+  profiles:
+    include: test, test2
+  # 关闭 springboot banner (横幅、图标)
   main:
     banner-mode: off
   datasource:
-    druid:
+    #    # 配置 druid 数据源
+    #    druid:
+    #      driver-class-name: com.mysql.cj.jdbc.Driver
+    #      url: jdbc:mysql://localhost:330/springboot
+    #      username: root
+    #      password: 2514632453
+    # 配置 hikari 数据源
+    url: jdbc:mysql://localhost:330/springboot
+    hikari:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:330/springboot
       username: root
       password: 2514632453
+
 # 设置日志模板格式，%d是日期，%p是日志级别，%5p是长度固定为5有利于对齐，%t是线程名，%c是类名,-40是左对齐40位，
 # .40控制内容的截取(超长部分会用缩略形式)，{cyan}是颜色，%m是打印的消息，%n是换行
 #logging:
@@ -40,7 +51,6 @@ mybatis-plus:
     # 数据库表名前缀
 #      table-prefix: tbl_
 
-
 # 日志
 # 1. 正常显示的信息
 # logging.level.root = info
@@ -50,29 +60,3 @@ mybatis-plus:
 
 # 3. debug 信息
 # logging.level.root = debug
-
-# 自定义数据
-book:
-  - id: 1
-    name: Qing1
-  - id: 2
-    name: Qing2
-
-baseDir: C:\
-
-userDir: ${baseDir}\Users
-
-# 使用 "" 括起来的字符串能识别出转义字符 \t \n
-# string: "spring\tboot\tlearning"
-
-source:
-  driver: mysql
-  url: https
-  # 配置数字类字符串最好加双引号，否则可能被识别成八进制，从而导致数据错误
-  port: "80"
-  timeout: 3
-  dataSize: 1
-
-# 第三方bean属性绑定
-#datasource:
-#  driverClassName: com.mysql.jdbc.Driver123
