@@ -22,6 +22,9 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       username: root
       password: 2514632453
+  redis:
+    host: localhost
+    port: 6379
 
 # 设置日志模板格式，%d是日期，%p是日志级别，%5p是长度固定为5有利于对齐，%t是线程名，%c是类名,-40是左对齐40位，
 # .40控制内容的截取(超长部分会用缩略形式)，{cyan}是颜色，%m是打印的消息，%n是换行

@@ -32,6 +32,12 @@
         <!--    <version>1.2.8</version>-->
         <!--</dependency>-->
 
+        <!--web框架-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!--mybatis-plus-->
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -46,10 +52,10 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!--web框架-->
+        <!--Redis-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
         <!--lombok-->
