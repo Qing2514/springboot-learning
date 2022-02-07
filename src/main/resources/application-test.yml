@@ -1,0 +1,25 @@
+# 自定义数据，${random.int}为随机数，${random.int(5)}为不大于5的正整数，${random.int(5, 10)}为5到10的整数
+book:
+  - id: ${random.int}
+    name: Qing1
+  - id: 2
+    name: Qing2
+
+baseDir: C:\
+
+userDir: ${baseDir}\Users
+
+# 使用 "" 括起来的字符串能识别出转义字符 \t \n
+# string: "spring\tboot\tlearning"
+
+source:
+  driver: mysql
+  url: https
+  # 配置数字类字符串最好加双引号，否则可能被识别成八进制，从而导致数据错误
+  port: "80"
+  timeout: 3
+  dataSize: 1
+
+# 第三方bean属性绑定
+#datasource:
+#  driverClassName: com.mysql.jdbc.Driver123
