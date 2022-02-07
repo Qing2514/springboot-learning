@@ -10,18 +10,18 @@ spring:
   main:
     banner-mode: off
   datasource:
-    #    # 配置 druid 数据源
-    #    druid:
-    #      driver-class-name: com.mysql.cj.jdbc.Driver
-    #      url: jdbc:mysql://localhost:330/springboot
-    #      username: root
-    #      password: 2514632453
-    # 配置 hikari 数据源
-    url: jdbc:mysql://localhost:330/springboot
-    hikari:
+    # 配置 druid 数据源
+    druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:330/springboot
       username: root
       password: 2514632453
+    # 配置 hikari 数据源
+  #    url: jdbc:mysql://localhost:330/springboot
+  #    hikari:
+  #      driver-class-name: com.mysql.cj.jdbc.Driver
+  #      username: root
+  #      password: 2514632453
   # Redis 数据库
   redis:
     host: localhost

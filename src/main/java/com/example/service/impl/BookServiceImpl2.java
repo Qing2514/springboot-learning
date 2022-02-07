@@ -6,6 +6,7 @@ import com.example.dao.BookDao;
 import com.example.domain.Book;
 import com.example.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -38,7 +39,14 @@ public class BookServiceImpl2 implements BookService {
         return bookDao.deleteById(id) > 0;
     }
 
+    // @Override
+    // public Book getById(Integer id) {
+    //     return bookDao.selectById(id);
+    // }
+
     @Override
+    @Cacheable(value = "cacheSpace", key = "#id")
+    // 使用缓存读取数据
     public Book getById(Integer id) {
         return bookDao.selectById(id);
     }

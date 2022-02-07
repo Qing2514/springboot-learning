@@ -25,17 +25,17 @@
         <!--    <version>2.2.0</version>-->
         <!--</dependency>-->
 
-        <!--druid-->
-        <!--<dependency>-->
-        <!--    <groupId>com.alibaba</groupId>-->
-        <!--    <artifactId>druid-spring-boot-starter</artifactId>-->
-        <!--    <version>1.2.8</version>-->
-        <!--</dependency>-->
-
         <!--web框架-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--druid-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.2.8</version>
         </dependency>
 
         <!--mybatis-plus-->
@@ -50,6 +50,19 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
+        </dependency>
+
+        <!--fastjson-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.78</version>
+        </dependency>
+
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
 
         <!--Redis-->
@@ -76,17 +89,10 @@
             <artifactId>elasticsearch-rest-high-level-client</artifactId>
         </dependency>
 
-        <!--fastjson-->
+        <!--cache-->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.78</version>
-        </dependency>
-
-        <!--lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
 
         <!--热部署工具-->
@@ -107,6 +113,7 @@
             <artifactId>hibernate-validator</artifactId>
         </dependency>
 
+        <!--测试工具-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
