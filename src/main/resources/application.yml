@@ -30,6 +30,9 @@ spring:
     # MongoDB 数据库
     mongodb:
       uri: mongodb://localhost/springboot
+  # ehcache缓存，默认是simple
+  cache:
+    type: ehcache
   # ES低版本
 #  elasticsearch:
 #    uris: http://localhost:9200
@@ -61,7 +64,6 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     # 数据库表名前缀
 #      table-prefix: tbl_
-
 # 日志
 # 1. 正常显示的信息
 # logging.level.root = info

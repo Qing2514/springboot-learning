@@ -45,8 +45,8 @@ public class BookServiceImpl2 implements BookService {
     // }
 
     @Override
+    // 将数据存入缓存，用到时去缓存取
     @Cacheable(value = "cacheSpace", key = "#id")
-    // 使用缓存读取数据
     public Book getById(Integer id) {
         return bookDao.selectById(id);
     }
