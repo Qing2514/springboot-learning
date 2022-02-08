@@ -29,7 +29,6 @@ public class SMSCodeServiceImpl implements SMSCodeService {
     @Override
     public boolean checkCode(SMSCode smsCode) {
         String code = smsCode.getCode();
-        System.out.println(code);
         String cacheCode = codeUtils.get(smsCode.getTele());
         return code.equals(cacheCode);
     }
