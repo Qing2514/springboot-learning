@@ -125,6 +125,12 @@
             <artifactId>spring-boot-starter-quartz</artifactId>
         </dependency>
 
+        <!--mail-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
         <!--测试工具-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
