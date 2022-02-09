@@ -31,8 +31,18 @@ spring:
     mongodb:
       uri: mongodb://localhost/springboot
   # ehcache缓存，默认是simple
+  #  cache:
+  #    type: ehcache
+  # redis缓存，默认是simple
   cache:
-    type: ehcache
+    type: redis
+    redis:
+      # 通用前缀
+      key-prefix: sms_
+      # 存活时间 10 秒
+      time-to-live: 10s
+      # 是否缓存空值
+      cache-null-values: false
   # ES低版本
 #  elasticsearch:
 #    uris: http://localhost:9200
