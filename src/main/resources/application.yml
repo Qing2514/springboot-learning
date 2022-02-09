@@ -6,9 +6,11 @@ spring:
   # 当前激活环境，多个环境间用，分割
   profiles:
     include: test, test2
+
   # 关闭 springboot banner (横幅、图标)
   main:
     banner-mode: off
+
   datasource:
     # 配置 druid 数据源
     druid:
@@ -16,23 +18,47 @@ spring:
       url: jdbc:mysql://localhost:330/springboot
       username: root
       password: 2514632453
+
     # 配置 hikari 数据源
   #    url: jdbc:mysql://localhost:330/springboot
   #    hikari:
   #      driver-class-name: com.mysql.cj.jdbc.Driver
   #      username: root
   #      password: 2514632453
+
   # Redis 数据库
   redis:
     host: localhost
     port: 6379
+
   data:
     # MongoDB 数据库
     mongodb:
       uri: mongodb://localhost/springboot
-  # ES低版本
-#  elasticsearch:
-#    uris: http://localhost:9200
+  #  # ES低版本
+  #    elasticsearch:
+  #      uris: http://localhost:9200
+
+  #  # ehcache缓存，默认是simple
+  #    cache:
+  #      type: ehcache
+
+  # redis缓存，默认是simple
+  cache:
+    type: redis
+    redis:
+      # 通用前缀
+      key-prefix: sms_
+      # 存活时间 10 秒
+      time-to-live: 10s
+      # 是否缓存空值
+      cache-null-values: false
+
+  # mail
+  mail:
+    host: smtp.qq.com
+    username: 2514632453@qq.com
+    password: qnidwjeueiuedhif
 
 # 设置日志模板格式，%d是日期，%p是日志级别，%5p是长度固定为5有利于对齐，%t是线程名，%c是类名,-40是左对齐40位，
 # .40控制内容的截取(超长部分会用缩略形式)，{cyan}是颜色，%m是打印的消息，%n是换行
@@ -61,7 +87,6 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     # 数据库表名前缀
 #      table-prefix: tbl_
-
 # 日志
 # 1. 正常显示的信息
 # logging.level.root = info
