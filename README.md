@@ -26,21 +26,17 @@
 23. 发送邮件案例
 
 ### 相关技术
-1. Spring Security 安全框架
-2. Mysql 数据库
-3. Druid 数据库连接池
-4. Jpa 持久层
-5. Lombok 注解
-6. Mybatis-plus 持久层框架
-7. ElementUI 分页插件
-8. Redis 缓存框架
-9. MongoDB 分布式数据库
-10. ES 搜索引擎
-11. Json 前后端交互
-12. Quartz 定时任务
-13. Mail 邮件分发
-14. Hibernate-Validator 验证框架
-
-
-丨  Spring Security  丨  安全框架  丨
-丨  MySQL  丨  数据库  丨
+Spring Security | 安全框架
+Mysql |数据库
+Druid | 数据库连接池
+Jpa | 持久层
+Lombok 注解
+Mybatis-plus | 持久层框架
+ElementUI | 分页插件
+Redis | 缓存框架
+MongoDB | 分布式数据库
+ES | 搜索引擎
+Json | 前后端交互
+Quartz | 定时任务
+Mail | 邮件分发
+Hibernate-Validator | 验证框架
