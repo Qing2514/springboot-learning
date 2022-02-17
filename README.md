@@ -27,6 +27,7 @@
 
 ### 相关技术
 技术 | 说明
+--- | ---
 Spring Security | 安全框架
 Mysql |数据库
 Druid | 数据库连接池
