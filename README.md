@@ -26,11 +26,12 @@
 23. 发送邮件案例
 
 ### 相关技术
+
 Spring Security | 安全框架
 Mysql |数据库
 Druid | 数据库连接池
 Jpa | 持久层
-Lombok 注解
+Lombok | 注解
 Mybatis-plus | 持久层框架
 ElementUI | 分页插件
 Redis | 缓存框架
