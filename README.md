@@ -41,5 +41,6 @@
 13. Mail 邮件分发
 14. Hibernate-Validator 验证框架
 
-Spring Security 丨 安全框架
-MySQL 丨 数据库
+
+丨  Spring Security  丨  安全框架  丨
+丨  MySQL  丨  数据库  丨
