@@ -40,3 +40,6 @@
 12. Quartz 定时任务
 13. Mail 邮件分发
 14. Hibernate-Validator 验证框架
+
+Spring Security 丨 安全框架
+MySQL 丨 数据库
